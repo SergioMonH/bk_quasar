@@ -19,7 +19,7 @@ El servicio se expone a través de una API.
 2. **Ejecutar el Contenedor**: Para ejecutar el contenedor, utiliza el siguiente comando:
 
    ```shell
-   docker run -p 8080:8080 --env-file=.env --network host satelite-service .
+   docker run -p 8080:8080 --network host satelite-service .
    ```
 
 ## Estructura del Proyecto

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "liky",
+    "distance": 110,
+    "message": [
+      "este",
+      "es",
+      "un",
+      "mensaje",
+      ""
+    ]
+  },
+  {
+    "name": "kenobi",
+    "distance": 100,
+    "message": [
+      "este",
+      "",
+      "",
+      "mensaje",
+      ""
+    ]
+  },
+  {
+    "name": "ssss",
+    "distance": 110,
+    "message": [
+      "este",
+      "es",
+      "un",
+      "secrteto",
+      ""
+    ]
+  },
+  {
+    "name": "ssad",
+    "distance": 110,
+    "message": [
+      "este",
+      "es",
+      "mensaje",
+      "secrteto",
+      ""
+    ]
+  }
+]

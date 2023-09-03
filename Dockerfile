@@ -1,25 +1,17 @@
-# Fase de compilación
-FROM golang:1.20 AS builder
+FROM golang:1.20-alpine AS builder
 
 WORKDIR /app
 
-# Copiar el código fuente y los archivos necesarios
 COPY . .
+RUN go get -d -v ./cmd/main
 
-# Descargar las dependencias
-RUN go mod download
+RUN go build -o app -v ./cmd/main
 
-# Compilar la aplicación
-RUN CGO_ENABLED=0 GOOS=linux go build -o satelite-service ./cmd/main
+ENTRYPOINT [ "./app" ]
 
-# Fase de producción
-FROM scratch
 
-# Exponer el puerto en el que la aplicación escuchará
-EXPOSE 8080
 
-# Copiar el binario compilado de la fase de compilación
-COPY --from=builder /app/satelite-service /satelite-service
 
-# Establecer el punto de entrada
-ENTRYPOINT ["/satelite-service"]
+#CMD ["./main"]
+# docker build -t myapp . 
+# dsudo s
